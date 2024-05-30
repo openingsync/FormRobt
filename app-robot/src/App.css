@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+:root {
+  --color-body: #eef0f8;
+  --color-primary: #1cc0ba;
+  --color-secondary: #c9f7f5;
+  --color-grey: #a1a1a1;
+  --color-dark: #3f4254;
+  --color-white: #fefdfe;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color-body);
+  font-family: "Roboto Slab", serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form_rot {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.subt_rot {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-dark);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content_rot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 6rem 1.25rem 3rem 1.25rem;
+}
+
+.input_rot {
+  width: 50rem;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  background: var(--color-white);
+  color: var(--color-dark);
+}
+.input_rot::placeholder {
+  color: var(--color-grey);
+}
+
+.btn_rot {
+  padding: 15px;
+  border-radius: 12px;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  cursor: pointer;
+  width: 12rem;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* robot (START)*/
+
+.section_rot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 70px;
+  animation: IMG 2s ease-in-out infinite;
+  margin-top: 40px;
+}
+
+@keyframes IMG {
+  0% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
+
+.robot_img img {
+  width: 18rem;
+}
+
+.eyes_container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100px;
+  height: 90px;
+  background-color: transparent;
+  border-radius: 25px;
+  right: 49%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.eye {
+  width: 22px;
+  height: 36px;
+  background: #676c82;
+  border-radius: 26%;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.pupil {
+  width: 10px;
+  height: 15px; 
+  position: relative;
+  /* width: 30px;
+  height: 45px; */
+  background: rgb(90, 213, 200);
+  background: linear-gradient(
+    240deg,
+    rgba(90, 213, 200, 1) 0%,
+    rgba(94, 187, 202, 1) 47%,
+    rgba(94, 187, 202, 1) 100%
+  );
+  border-radius: 26%;
+
+ 
+  transition: transform 0.8s ease-in-out;
+}
+.left-eye {
+  margin-right: 13px;
+}
+
+.right-eye {
+  margin-left: 13px;
+}
+
+/* robot (END)*/
